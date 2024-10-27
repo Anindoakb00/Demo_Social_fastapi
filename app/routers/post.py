@@ -72,7 +72,7 @@ def get_post(id:int, db:Session = Depends(get_db),current_user:int = Depends(oau
         detail = f"post with id: {id} was not found")
    if post.owner_id != current_user:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, 
-                            detail=f"Not authioraised to perferm requested action")
+                            detail=f"Not a uthioraised to perferm requested action")
         
    return post  
 
