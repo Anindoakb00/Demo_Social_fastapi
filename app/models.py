@@ -28,11 +28,6 @@ class Vote(Base):
     __tablename__ = "votes"
     user_id = Column(Integer, ForeignKey(
         "users.id", ondelete="CASCADE"), primary_key=True)
-    post_id = Column(Integer, ForeignKey(
-<<<<<<< HEAD
-        "posts.id", ondelete="CASCADE"), primary_key=True)
-=======
-        "posts.id", ondelete="CASCADE"), primary_key=True) 
->>>>>>> c2a9bb5478cfb7979df84deefaad441b9d16f7f4
+    post_id = Column(Integer, ForeignKey)
 
- 
+       
